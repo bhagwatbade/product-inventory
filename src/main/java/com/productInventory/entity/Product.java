@@ -3,6 +3,7 @@ package com.productInventory.entity;
 import com.productInventory.ientity.IProduct;
 
 /**
+ *  Entity represent product
  * 
  * @author bhagwat
  *

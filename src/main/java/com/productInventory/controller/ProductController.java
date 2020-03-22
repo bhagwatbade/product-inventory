@@ -11,6 +11,12 @@ import com.productInventory.icontroller.IProductController;
 import com.productInventory.imodel.IProductModel;
 import com.productInventory.iservice.IProductService;
 
+/**
+ * Provide product services to client
+ * 
+ * @author bhagwat
+ *
+ */
 @RestController
 public class ProductController implements IProductController {
 	

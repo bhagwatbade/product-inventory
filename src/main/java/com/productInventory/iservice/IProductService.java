@@ -5,6 +5,7 @@ import java.util.Set;
 import com.productInventory.imodel.IProductModel;
 
 /**
+ *  provide common services for product
  * 
  * @author bhagwat
  *

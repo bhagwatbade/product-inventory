@@ -10,6 +10,7 @@ import com.productInventory.idao.IProductDAO;
 import com.productInventory.ientity.IProduct;
 
 /**
+ *  Product DAO handle persistent operation for product
  * 
  * @author bhagwat
  *

@@ -13,7 +13,7 @@ import com.productInventory.iservice.IProductService;
 import com.productInventory.model.ProductModel;
 
 /**
- * common services for product
+ * provide common services for product
  * @author bhagwat
  *
  */
