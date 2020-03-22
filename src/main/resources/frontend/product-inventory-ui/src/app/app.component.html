@@ -1,0 +1,46 @@
+<table align="center" border="1">
+  <tr>
+    <th>Search</th>
+    <td>
+      <select [(ngModel)]="searchType">
+        <option value="">Search Type</option>
+        <option value="productId">Product Id</option>
+        <option value="productName">Product Name</option>
+        <option value="productPrice">Product Price</option>
+        <option value="productSpecification">Product Specification</option>
+      </select>
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="searchData" *ngIf="searchType !== 'productPrice'; else priceRange" />
+      <ng-template #priceRange>
+        Price Range
+        <input type="number" [(ngModel)]="lowPrice" /> TO
+        <input type="number" [(ngModel)]="highPrice" />
+      </ng-template>
+    </td>
+    <td>
+
+      <button type="submit" (click)="search()">Search</button>
+    </td>
+  </tr>
+</table>
+<br />
+<table align="center" border="1">
+  <tbody>
+    <tr>
+      <th>Index</th>
+      <th (click)="sort('productId')">Product Id {{ sortBy == 'productId' ? '^' : ''}}</th>
+      <th (click)="sort('productName')">Product Name {{ sortBy == 'productName' ? '^' : ''}}</th>
+      <th (click)="sort('productPrice')">Product Price {{ sortBy == 'productPrice' ? '^' : ''}}</th>
+      <th (click)="sort('productSpecification')">Product Specification {{ sortBy == 'productSpecification' ? '^' : ''}}
+      </th>
+    </tr>
+    <tr *ngFor="let product of products;let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{product.productId}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.productPrice | currency : 'INR'}}</td>
+      <td>{{product.productSpecification}}</td>
+    </tr>
+  </tbody>
+</table>
